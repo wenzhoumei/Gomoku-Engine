@@ -2,7 +2,7 @@
 
 #include "game_constants.h"
 
-class GameState {
+struct GameState {
 	char turnOf;
 	char board[BOARD_SIZE][BOARD_SIZE];
 };

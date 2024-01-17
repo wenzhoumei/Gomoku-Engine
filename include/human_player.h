@@ -3,7 +3,7 @@
 
 class HumanPlayer: public Player {
 public:
-	void move(const GameState& game_state) override;
+	void move(GameState& game_state) override;
 
 private:
 	void prompt(const GameState& game_state) const;
