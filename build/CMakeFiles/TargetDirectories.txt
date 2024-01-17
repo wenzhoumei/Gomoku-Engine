@@ -1,0 +1,3 @@
+/home/wen/Dev/GomokuEngine/build/CMakeFiles/kanazawa.dir
+/home/wen/Dev/GomokuEngine/build/CMakeFiles/edit_cache.dir
+/home/wen/Dev/GomokuEngine/build/CMakeFiles/rebuild_cache.dir
