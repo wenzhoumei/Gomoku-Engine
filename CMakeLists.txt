@@ -7,6 +7,7 @@ project(MyProject VERSION 1.0)
 # Add an executable target
 add_executable(kanazawa
 	src/main.cpp
+	src/human_player.cpp
 )
 
 # Add include directories

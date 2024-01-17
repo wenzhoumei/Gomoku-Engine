@@ -3,5 +3,7 @@
 #include "game_state.h"
 
 class Player {
-	virtual void move(const GameState& game_state) = 0;
+public:
+	// Updates board of game state
+	virtual void move(GameState& game_state) = 0;
 };
