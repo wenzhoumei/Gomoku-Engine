@@ -5,8 +5,10 @@
 int main() {
 	Game game;
 
-	game.initialize(new HumanPlayer(), new HumanPlayer());
-	game.run();
+	HumanPlayer player1;
+	HumanPlayer player2;
+
+	game.run(&player1, &player2, 'O', 'X');
 
 	return 0;
 }
