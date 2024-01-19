@@ -1,4 +1,4 @@
-#include "human_player.h"
+#include "../include/human_player.h"
 #include <iostream>
 #include <sstream>
 
@@ -30,15 +30,7 @@ void HumanPlayer::move(GameState& game_state) {
 }
 
 void HumanPlayer::prompt(const GameState& game_state) const {
-	std::cout << "Turn: " << game_state.turnOf << std::endl;
-
-	for (int i = 0; i < BOARD_SIZE; i++) {
-		for (int j = 0; j < BOARD_SIZE; j++) {
-			std::cout << game_state.board[i][j] << ' ';
-		}
-
-		std::cout << std::endl;
-	}
+	std::cout << "Input move: " << std::flush;
 }
 
 bool HumanPlayer::getCoords(int& x, int& y) const {

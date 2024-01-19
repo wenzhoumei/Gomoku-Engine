@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/kanazawa.dir/src/main.cpp.o CMakeFiles/kanazawa.dir/src/human_player.cpp.o CMakeFiles/kanazawa.dir/src/game.cpp.o -o kanazawa 
+/usr/bin/c++ CMakeFiles/kanazawa.dir/src/main.cpp.o CMakeFiles/kanazawa.dir/src/human_player.cpp.o CMakeFiles/kanazawa.dir/src/bot_player.cpp.o CMakeFiles/kanazawa.dir/src/game.cpp.o CMakeFiles/kanazawa.dir/src/game_state.cpp.o -o kanazawa 

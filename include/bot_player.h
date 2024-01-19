@@ -1,6 +1,8 @@
 #include "player.h"
+#include <string>
 
 class BotPlayer: public Player {
 public:
-	void move(const GameState& game_state) override;
+	void move(GameState& game_state) override;
+	std::string identity() override { return "random bot"; };
 };

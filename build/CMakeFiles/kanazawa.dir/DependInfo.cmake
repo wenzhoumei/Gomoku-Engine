@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/wen/Dev/GomokuEngine/src/bot_player.cpp" "CMakeFiles/kanazawa.dir/src/bot_player.cpp.o" "gcc" "CMakeFiles/kanazawa.dir/src/bot_player.cpp.o.d"
   "/home/wen/Dev/GomokuEngine/src/game.cpp" "CMakeFiles/kanazawa.dir/src/game.cpp.o" "gcc" "CMakeFiles/kanazawa.dir/src/game.cpp.o.d"
+  "/home/wen/Dev/GomokuEngine/src/game_state.cpp" "CMakeFiles/kanazawa.dir/src/game_state.cpp.o" "gcc" "CMakeFiles/kanazawa.dir/src/game_state.cpp.o.d"
   "/home/wen/Dev/GomokuEngine/src/human_player.cpp" "CMakeFiles/kanazawa.dir/src/human_player.cpp.o" "gcc" "CMakeFiles/kanazawa.dir/src/human_player.cpp.o.d"
   "/home/wen/Dev/GomokuEngine/src/main.cpp" "CMakeFiles/kanazawa.dir/src/main.cpp.o" "gcc" "CMakeFiles/kanazawa.dir/src/main.cpp.o.d"
   )

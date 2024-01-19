@@ -140,4 +140,5 @@ CMakeFiles/kanazawa.dir/src/main.cpp.o: \
  /home/wen/Dev/GomokuEngine/include/player.h \
  /home/wen/Dev/GomokuEngine/include/game_state.h \
  /home/wen/Dev/GomokuEngine/include/game_constants.h \
- /home/wen/Dev/GomokuEngine/include/human_player.h
+ /home/wen/Dev/GomokuEngine/include/human_player.h \
+ /home/wen/Dev/GomokuEngine/include/bot_player.h

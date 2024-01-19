@@ -4,6 +4,7 @@
 class HumanPlayer: public Player {
 public:
 	void move(GameState& game_state) override;
+	std::string identity() override { return "human"; };
 
 private:
 	void prompt(const GameState& game_state) const;

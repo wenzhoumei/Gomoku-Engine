@@ -5,4 +5,6 @@
 struct GameState {
 	char turnOf;
 	char board[BOARD_SIZE][BOARD_SIZE];
+
+	void display() const;
 };

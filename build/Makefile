@@ -129,6 +129,30 @@ kanazawa/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/build
 .PHONY : kanazawa/fast
 
+src/bot_player.o: src/bot_player.cpp.o
+.PHONY : src/bot_player.o
+
+# target to build an object file
+src/bot_player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/bot_player.cpp.o
+.PHONY : src/bot_player.cpp.o
+
+src/bot_player.i: src/bot_player.cpp.i
+.PHONY : src/bot_player.i
+
+# target to preprocess a source file
+src/bot_player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/bot_player.cpp.i
+.PHONY : src/bot_player.cpp.i
+
+src/bot_player.s: src/bot_player.cpp.s
+.PHONY : src/bot_player.s
+
+# target to generate assembly for a file
+src/bot_player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/bot_player.cpp.s
+.PHONY : src/bot_player.cpp.s
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -152,6 +176,30 @@ src/game.s: src/game.cpp.s
 src/game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/game.cpp.s
 .PHONY : src/game.cpp.s
+
+src/game_state.o: src/game_state.cpp.o
+.PHONY : src/game_state.o
+
+# target to build an object file
+src/game_state.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/game_state.cpp.o
+.PHONY : src/game_state.cpp.o
+
+src/game_state.i: src/game_state.cpp.i
+.PHONY : src/game_state.i
+
+# target to preprocess a source file
+src/game_state.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/game_state.cpp.i
+.PHONY : src/game_state.cpp.i
+
+src/game_state.s: src/game_state.cpp.s
+.PHONY : src/game_state.s
+
+# target to generate assembly for a file
+src/game_state.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/game_state.cpp.s
+.PHONY : src/game_state.cpp.s
 
 src/human_player.o: src/human_player.cpp.o
 .PHONY : src/human_player.o
@@ -210,9 +258,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... kanazawa"
+	@echo "... src/bot_player.o"
+	@echo "... src/bot_player.i"
+	@echo "... src/bot_player.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
+	@echo "... src/game_state.o"
+	@echo "... src/game_state.i"
+	@echo "... src/game_state.s"
 	@echo "... src/human_player.o"
 	@echo "... src/human_player.i"
 	@echo "... src/human_player.s"
