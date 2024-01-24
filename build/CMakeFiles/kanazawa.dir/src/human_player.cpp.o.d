@@ -1,10 +1,10 @@
 CMakeFiles/kanazawa.dir/src/human_player.cpp.o: \
  /home/wen/Dev/GomokuEngine/src/human_player.cpp \
  /usr/include/stdc-predef.h \
- /home/wen/Dev/GomokuEngine/include/human_player.h \
- /home/wen/Dev/GomokuEngine/include/player.h \
- /home/wen/Dev/GomokuEngine/include/game_state.h \
- /home/wen/Dev/GomokuEngine/include/game_constants.h \
+ /home/wen/Dev/GomokuEngine/src/../include/human_player.h \
+ /home/wen/Dev/GomokuEngine/src/../include/player.h \
+ /home/wen/Dev/GomokuEngine/src/../include/game_state.h \
+ /home/wen/Dev/GomokuEngine/src/../include/game_constants.h \
  /usr/include/c++/13.2.1/string \
  /usr/include/c++/13.2.1/bits/requires_hosted.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \

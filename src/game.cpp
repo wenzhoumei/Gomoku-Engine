@@ -2,7 +2,7 @@
 #include <iostream>
 #include <iomanip>
 
-void Game::run(Player* player1, Player* player2, char player1_marker, char player2_marker) {
+void Game::run(Player* player1, Player* player2) {
   GameState game_state;
   for (int i = 0; i < BOARD_SIZE; i++) {
     for (int j = 0; j < BOARD_SIZE; j++) {
@@ -10,19 +10,19 @@ void Game::run(Player* player1, Player* player2, char player1_marker, char playe
     }
   }
 
-  run(game_state, player1, player2, player1_marker, player2_marker);
+  run(game_state, player1, player2);
 }
 
-Player* Game::run(GameState game_state, Player* player1, Player* player2, char player1_marker, char player2_marker) {
+Player* Game::run(GameState game_state, Player* player1, Player* player2) {
   while (true) {
-    int turnRes = playTurn(game_state, player1, player1_marker);
+    int turnRes = playTurn(game_state, player1, PLAYER1_MARKER);
     if (turnRes == 1) {
       return player1;
     } else if (turnRes == 2) {
       return nullptr;
     }
 
-    turnRes = playTurn(game_state, player2, player2_marker);
+    turnRes = playTurn(game_state, player2, PLAYER2_MARKER);
     if (turnRes == 1) {
       return player2;
     } else if (turnRes == 2) {
@@ -44,13 +44,13 @@ int Game::playTurn(GameState& game_state, Player* player, char marker) {
   game_state.display();
   player->move(game_state);
 
-  /*
-     if (hasWon(game_state)) {
-     std::cout << game_state.turnOf << " has won!" << std::endl;
-     display();
-     return 1;
-     }
-     */
+  if (hasWon(game_state)) {
+    std::cout << "----------------------------" << std::endl;
+    std::cout << game_state.turnOf << " has won!" << std::endl;
+    game_state.turnOf = '-';
+    game_state.display();
+    return 1;
+  }
 
   if (fullBoard(game_state)) {
     std::cout << "----------------------------" << std::endl;
@@ -64,15 +64,61 @@ int Game::playTurn(GameState& game_state, Player* player, char marker) {
 }
 
 bool Game::hasWon(const GameState& game_state) const {
+  int directions[][2] = {
+    {1, 0},
+    {0, 1},
+    {1, 1},
+    {-1, 1},
+  };
+
   for (int i = 0; i < BOARD_SIZE; i++) {
     for (int j = 0; j < BOARD_SIZE; j++) {
-      if (game_state.board[i][j] == EMPTY_CELL) {
-        return false;
+      // Assumes only turnOf can win
+      if (game_state.board[i][j] == game_state.turnOf) {
+        for (int k = 0; k < 4; k++) {
+          int counter = 1;
+
+          int i_exp = i;
+          int j_exp = j;
+
+          while (true) {
+            i_exp += directions[k][0];
+            j_exp += directions[k][1];
+
+            if (i_exp < 0 || i_exp >= BOARD_SIZE || j_exp < 0 || j_exp >= BOARD_SIZE)
+              break;
+
+            if (game_state.board[i_exp][j_exp] != game_state.turnOf)
+              break;
+
+            counter++;
+          }
+
+          i_exp = i;
+          j_exp = j;
+
+          while (true) {
+            i_exp -= directions[k][0];
+            j_exp -= directions[k][1];
+
+            if (i_exp < 0 || i_exp >= BOARD_SIZE || j_exp < 0 || j_exp >= BOARD_SIZE)
+              break;
+
+            if (game_state.board[i_exp][j_exp] != game_state.turnOf)
+              break;
+
+            counter++;
+          }
+
+          if (counter >= N) {
+            return true;
+          }
+        }
       }
     }
   }
 
-  return true;
+  return false;
 }
 
 bool Game::fullBoard(const GameState& game_state) const {
