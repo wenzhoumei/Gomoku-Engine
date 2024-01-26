@@ -172,5 +172,5 @@ int SimpleBotPlayer::evaluate(const GameState& game_state) const {
 
   game_state.display();
   std::cout << "SCORE: " << threatScore << std::endl;
-  return safeScore * 10 + threatScore + centreScore;
+  return 1000 -safeScore + threatScore + centreScore;
 }
