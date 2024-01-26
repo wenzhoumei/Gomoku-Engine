@@ -1,30 +1,10 @@
+#include "../include/simple_bot_player.h"
 
-#include "../include/bot_player.h"
-
-#include <ctime>
-#include <iostream>
-
-void RandomBotPlayer::move(GameState& game_state) {
-    // Seed the random number generator
-    std::srand(std::time(0));
-
-    // Find the first empty position in a circular manner starting from a random point
-    int start_index = std::rand() % (BOARD_SIZE * BOARD_SIZE);
-    for (int k = 0; k < BOARD_SIZE * BOARD_SIZE; k++) {
-        int index = (start_index + k) % (BOARD_SIZE * BOARD_SIZE);
-        int i = index / BOARD_SIZE;
-        int j = index % BOARD_SIZE;
-
-        if (game_state.board[i][j] == '.') {
-            game_state.board[i][j] = game_state.turnOf;
-            return;
-        }
-    }
-}
+#include <limits>
 
 void SimpleBotPlayer::move(GameState& game_state) {
   GameState best_game_state;
-  int max_score = -1;
+  int max_score = std::numeric_limits<int>::min();
 
   for (const GameState& gs: nextTurnStates(game_state)) {
     int score = evaluate(gs);
@@ -106,8 +86,8 @@ int SimpleBotPlayer::evaluate(const GameState& game_state) const {
 
             playerCounter++;
 
-            std::cout << "I: " << i << std::endl;
-            std::cout << "J: " << j << std::endl;
+            //std::cout << "I: " << i << std::endl;
+            //std::cout << "J: " << j << std::endl;
           }
 
           i_exp = i;
@@ -121,8 +101,8 @@ int SimpleBotPlayer::evaluate(const GameState& game_state) const {
                || game_state.board[i_exp][j_exp] != game_state.turnOf)
               break;
 
-            std::cout << "I: " << i_exp << std::endl;
-            std::cout << "J: " << j << std::endl;
+            //std::cout << "I: " << i_exp << std::endl;
+            //std::cout << "J: " << j << std::endl;
             playerCounter++;
           }
 
@@ -170,7 +150,7 @@ int SimpleBotPlayer::evaluate(const GameState& game_state) const {
   }
 
 
-  game_state.display();
-  std::cout << "SCORE: " << threatScore << std::endl;
-  return 1000 -safeScore + threatScore + centreScore;
+  //game_state.display();
+  //std::cout << "SCORE: " << threatScore << std::endl;
+  return -(9 * safeScore) + threatScore + centreScore;
 }

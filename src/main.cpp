@@ -1,11 +1,11 @@
 #include "../include/game.h"
 #include "../include/human_player.h"
-#include "../include/bot_player.h"
+#include "../include/simple_bot_player.h"
 
 int main() {
 	Game game;
 
-	HumanPlayer player1;
+	SimpleBotPlayer player1;
 	SimpleBotPlayer player2;
 
 	game.run(&player1, &player2);
