@@ -46,7 +46,7 @@ int Game::playTurn(GameState& game_state, Player* player, char marker) {
 
   if (hasWon(game_state)) {
     std::cout << "----------------------------" << std::endl;
-    std::cout << game_state.turnOf << " has won!" << std::endl;
+    std::cout << game_state.turnOf << " (" << player->identity() << ")" << " has won!" << std::endl;
     game_state.turnOf = '-';
     game_state.display();
     return 1;

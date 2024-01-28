@@ -129,30 +129,6 @@ kanazawa/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/build
 .PHONY : kanazawa/fast
 
-src/bot_player.o: src/bot_player.cpp.o
-.PHONY : src/bot_player.o
-
-# target to build an object file
-src/bot_player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/bot_player.cpp.o
-.PHONY : src/bot_player.cpp.o
-
-src/bot_player.i: src/bot_player.cpp.i
-.PHONY : src/bot_player.i
-
-# target to preprocess a source file
-src/bot_player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/bot_player.cpp.i
-.PHONY : src/bot_player.cpp.i
-
-src/bot_player.s: src/bot_player.cpp.s
-.PHONY : src/bot_player.s
-
-# target to generate assembly for a file
-src/bot_player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/bot_player.cpp.s
-.PHONY : src/bot_player.cpp.s
-
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -249,6 +225,78 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/minimax_bot_player.o: src/minimax_bot_player.cpp.o
+.PHONY : src/minimax_bot_player.o
+
+# target to build an object file
+src/minimax_bot_player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o
+.PHONY : src/minimax_bot_player.cpp.o
+
+src/minimax_bot_player.i: src/minimax_bot_player.cpp.i
+.PHONY : src/minimax_bot_player.i
+
+# target to preprocess a source file
+src/minimax_bot_player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.i
+.PHONY : src/minimax_bot_player.cpp.i
+
+src/minimax_bot_player.s: src/minimax_bot_player.cpp.s
+.PHONY : src/minimax_bot_player.s
+
+# target to generate assembly for a file
+src/minimax_bot_player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.s
+.PHONY : src/minimax_bot_player.cpp.s
+
+src/random_bot_player.o: src/random_bot_player.cpp.o
+.PHONY : src/random_bot_player.o
+
+# target to build an object file
+src/random_bot_player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o
+.PHONY : src/random_bot_player.cpp.o
+
+src/random_bot_player.i: src/random_bot_player.cpp.i
+.PHONY : src/random_bot_player.i
+
+# target to preprocess a source file
+src/random_bot_player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.i
+.PHONY : src/random_bot_player.cpp.i
+
+src/random_bot_player.s: src/random_bot_player.cpp.s
+.PHONY : src/random_bot_player.s
+
+# target to generate assembly for a file
+src/random_bot_player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.s
+.PHONY : src/random_bot_player.cpp.s
+
+src/simple_bot_player.o: src/simple_bot_player.cpp.o
+.PHONY : src/simple_bot_player.o
+
+# target to build an object file
+src/simple_bot_player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o
+.PHONY : src/simple_bot_player.cpp.o
+
+src/simple_bot_player.i: src/simple_bot_player.cpp.i
+.PHONY : src/simple_bot_player.i
+
+# target to preprocess a source file
+src/simple_bot_player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.i
+.PHONY : src/simple_bot_player.cpp.i
+
+src/simple_bot_player.s: src/simple_bot_player.cpp.s
+.PHONY : src/simple_bot_player.s
+
+# target to generate assembly for a file
+src/simple_bot_player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/kanazawa.dir/build.make CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.s
+.PHONY : src/simple_bot_player.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -258,9 +306,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... kanazawa"
-	@echo "... src/bot_player.o"
-	@echo "... src/bot_player.i"
-	@echo "... src/bot_player.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
@@ -273,6 +318,15 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/minimax_bot_player.o"
+	@echo "... src/minimax_bot_player.i"
+	@echo "... src/minimax_bot_player.s"
+	@echo "... src/random_bot_player.o"
+	@echo "... src/random_bot_player.i"
+	@echo "... src/random_bot_player.s"
+	@echo "... src/simple_bot_player.o"
+	@echo "... src/simple_bot_player.i"
+	@echo "... src/simple_bot_player.s"
 .PHONY : help
 
 

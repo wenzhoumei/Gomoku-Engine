@@ -106,9 +106,10 @@ CMakeFiles/kanazawa.dir/src/main.cpp.o: \
  /usr/include/c++/13.2.1/bits/uses_allocator_args.h \
  /usr/include/c++/13.2.1/tuple \
  /home/wen/Dev/GomokuEngine/src/../include/human_player.h \
- /home/wen/Dev/GomokuEngine/src/../include/bot_player.h \
+ /home/wen/Dev/GomokuEngine/src/../include/simple_bot_player.h \
  /usr/include/c++/13.2.1/vector \
  /usr/include/c++/13.2.1/bits/stl_uninitialized.h \
  /usr/include/c++/13.2.1/bits/stl_vector.h \
  /usr/include/c++/13.2.1/bits/stl_bvector.h \
- /usr/include/c++/13.2.1/bits/vector.tcc
+ /usr/include/c++/13.2.1/bits/vector.tcc \
+ /home/wen/Dev/GomokuEngine/src/../include/minimax_bot_player.h

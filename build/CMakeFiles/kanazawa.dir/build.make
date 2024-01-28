@@ -97,24 +97,52 @@ CMakeFiles/kanazawa.dir/src/human_player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kanazawa.dir/src/human_player.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wen/Dev/GomokuEngine/src/human_player.cpp -o CMakeFiles/kanazawa.dir/src/human_player.cpp.s
 
-CMakeFiles/kanazawa.dir/src/bot_player.cpp.o: CMakeFiles/kanazawa.dir/flags.make
-CMakeFiles/kanazawa.dir/src/bot_player.cpp.o: /home/wen/Dev/GomokuEngine/src/bot_player.cpp
-CMakeFiles/kanazawa.dir/src/bot_player.cpp.o: CMakeFiles/kanazawa.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wen/Dev/GomokuEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/kanazawa.dir/src/bot_player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kanazawa.dir/src/bot_player.cpp.o -MF CMakeFiles/kanazawa.dir/src/bot_player.cpp.o.d -o CMakeFiles/kanazawa.dir/src/bot_player.cpp.o -c /home/wen/Dev/GomokuEngine/src/bot_player.cpp
+CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o: CMakeFiles/kanazawa.dir/flags.make
+CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o: /home/wen/Dev/GomokuEngine/src/random_bot_player.cpp
+CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o: CMakeFiles/kanazawa.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wen/Dev/GomokuEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o -MF CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o.d -o CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o -c /home/wen/Dev/GomokuEngine/src/random_bot_player.cpp
 
-CMakeFiles/kanazawa.dir/src/bot_player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/kanazawa.dir/src/bot_player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wen/Dev/GomokuEngine/src/bot_player.cpp > CMakeFiles/kanazawa.dir/src/bot_player.cpp.i
+CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wen/Dev/GomokuEngine/src/random_bot_player.cpp > CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.i
 
-CMakeFiles/kanazawa.dir/src/bot_player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kanazawa.dir/src/bot_player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wen/Dev/GomokuEngine/src/bot_player.cpp -o CMakeFiles/kanazawa.dir/src/bot_player.cpp.s
+CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wen/Dev/GomokuEngine/src/random_bot_player.cpp -o CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.s
+
+CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o: CMakeFiles/kanazawa.dir/flags.make
+CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o: /home/wen/Dev/GomokuEngine/src/simple_bot_player.cpp
+CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o: CMakeFiles/kanazawa.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wen/Dev/GomokuEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o -MF CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o.d -o CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o -c /home/wen/Dev/GomokuEngine/src/simple_bot_player.cpp
+
+CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wen/Dev/GomokuEngine/src/simple_bot_player.cpp > CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.i
+
+CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wen/Dev/GomokuEngine/src/simple_bot_player.cpp -o CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.s
+
+CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o: CMakeFiles/kanazawa.dir/flags.make
+CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o: /home/wen/Dev/GomokuEngine/src/minimax_bot_player.cpp
+CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o: CMakeFiles/kanazawa.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wen/Dev/GomokuEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o -MF CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o.d -o CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o -c /home/wen/Dev/GomokuEngine/src/minimax_bot_player.cpp
+
+CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wen/Dev/GomokuEngine/src/minimax_bot_player.cpp > CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.i
+
+CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wen/Dev/GomokuEngine/src/minimax_bot_player.cpp -o CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.s
 
 CMakeFiles/kanazawa.dir/src/game.cpp.o: CMakeFiles/kanazawa.dir/flags.make
 CMakeFiles/kanazawa.dir/src/game.cpp.o: /home/wen/Dev/GomokuEngine/src/game.cpp
 CMakeFiles/kanazawa.dir/src/game.cpp.o: CMakeFiles/kanazawa.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wen/Dev/GomokuEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/kanazawa.dir/src/game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wen/Dev/GomokuEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/kanazawa.dir/src/game.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kanazawa.dir/src/game.cpp.o -MF CMakeFiles/kanazawa.dir/src/game.cpp.o.d -o CMakeFiles/kanazawa.dir/src/game.cpp.o -c /home/wen/Dev/GomokuEngine/src/game.cpp
 
 CMakeFiles/kanazawa.dir/src/game.cpp.i: cmake_force
@@ -128,7 +156,7 @@ CMakeFiles/kanazawa.dir/src/game.cpp.s: cmake_force
 CMakeFiles/kanazawa.dir/src/game_state.cpp.o: CMakeFiles/kanazawa.dir/flags.make
 CMakeFiles/kanazawa.dir/src/game_state.cpp.o: /home/wen/Dev/GomokuEngine/src/game_state.cpp
 CMakeFiles/kanazawa.dir/src/game_state.cpp.o: CMakeFiles/kanazawa.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wen/Dev/GomokuEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/kanazawa.dir/src/game_state.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/wen/Dev/GomokuEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/kanazawa.dir/src/game_state.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/kanazawa.dir/src/game_state.cpp.o -MF CMakeFiles/kanazawa.dir/src/game_state.cpp.o.d -o CMakeFiles/kanazawa.dir/src/game_state.cpp.o -c /home/wen/Dev/GomokuEngine/src/game_state.cpp
 
 CMakeFiles/kanazawa.dir/src/game_state.cpp.i: cmake_force
@@ -143,7 +171,9 @@ CMakeFiles/kanazawa.dir/src/game_state.cpp.s: cmake_force
 kanazawa_OBJECTS = \
 "CMakeFiles/kanazawa.dir/src/main.cpp.o" \
 "CMakeFiles/kanazawa.dir/src/human_player.cpp.o" \
-"CMakeFiles/kanazawa.dir/src/bot_player.cpp.o" \
+"CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o" \
+"CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o" \
+"CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o" \
 "CMakeFiles/kanazawa.dir/src/game.cpp.o" \
 "CMakeFiles/kanazawa.dir/src/game_state.cpp.o"
 
@@ -152,12 +182,14 @@ kanazawa_EXTERNAL_OBJECTS =
 
 kanazawa: CMakeFiles/kanazawa.dir/src/main.cpp.o
 kanazawa: CMakeFiles/kanazawa.dir/src/human_player.cpp.o
-kanazawa: CMakeFiles/kanazawa.dir/src/bot_player.cpp.o
+kanazawa: CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o
+kanazawa: CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o
+kanazawa: CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o
 kanazawa: CMakeFiles/kanazawa.dir/src/game.cpp.o
 kanazawa: CMakeFiles/kanazawa.dir/src/game_state.cpp.o
 kanazawa: CMakeFiles/kanazawa.dir/build.make
 kanazawa: CMakeFiles/kanazawa.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wen/Dev/GomokuEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable kanazawa"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/wen/Dev/GomokuEngine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable kanazawa"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/kanazawa.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

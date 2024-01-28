@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/kanazawa.dir/src/bot_player.cpp.o"
-  "CMakeFiles/kanazawa.dir/src/bot_player.cpp.o.d"
   "CMakeFiles/kanazawa.dir/src/game.cpp.o"
   "CMakeFiles/kanazawa.dir/src/game.cpp.o.d"
   "CMakeFiles/kanazawa.dir/src/game_state.cpp.o"
@@ -9,6 +7,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/kanazawa.dir/src/human_player.cpp.o.d"
   "CMakeFiles/kanazawa.dir/src/main.cpp.o"
   "CMakeFiles/kanazawa.dir/src/main.cpp.o.d"
+  "CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o"
+  "CMakeFiles/kanazawa.dir/src/minimax_bot_player.cpp.o.d"
+  "CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o"
+  "CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o.d"
+  "CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o"
+  "CMakeFiles/kanazawa.dir/src/simple_bot_player.cpp.o.d"
   "kanazawa"
   "kanazawa.pdb"
 )

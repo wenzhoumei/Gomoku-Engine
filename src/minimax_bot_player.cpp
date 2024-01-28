@@ -1,19 +1,21 @@
-#include "../include/simple_bot_player.h"
+#include "../include/minimax_bot_player.h"
 
 #include <limits>
 #include <iostream>
 
-void SimpleBotPlayer::move(GameState& game_state) {
+void MinimaxBotPlayer::move(GameState& game_state) {
   GameState best_game_state;
   int max_score = std::numeric_limits<int>::min();
 
   for (const GameState& gs: nextTurnStates(game_state)) {
-    int score = evaluate(gs);
+    int score = minimax(gs, 2, std::numeric_limits<int>::min(), std::numeric_limits<int>::max(), false);
 
     if (score > max_score) {
       best_game_state = gs;
       max_score = score;
-      //std::cout << score << std::endl;
+
+      std::cout << score << std::endl;
+      gs.display();
     }
   }
 
@@ -21,7 +23,55 @@ void SimpleBotPlayer::move(GameState& game_state) {
   game_state = best_game_state;
 }
 
-std::vector<GameState> SimpleBotPlayer::nextTurnStates(const GameState& game_state) const {
+#include <algorithm>
+int MinimaxBotPlayer::minimax(const GameState& game_state, int depth, int alpha, int beta, bool maximising_player) const {
+  bool win = hasWon(game_state);
+  if (depth == 0 || win) {
+    if (win) {
+      if (maximising_player) {
+        return std::numeric_limits<int>::min();
+      } else {
+        return std::numeric_limits<int>::max();
+      }
+    }
+
+    return evaluate(game_state);
+  }
+
+  if (maximising_player) {
+    int max_eval = std::numeric_limits<int>::min();
+    for (const GameState& child: nextTurnStates(game_state)) {
+      int eval = minimax(child, depth - 1, alpha, beta, false);
+      max_eval = std::max(eval, max_eval);
+
+      /*
+      alpha = std::max(eval, alpha);
+      if (beta <= alpha) {
+        break;
+      }
+      */
+    }
+
+    return max_eval;
+  } else {
+    int min_eval = std::numeric_limits<int>::max();
+    for (const GameState& child: nextTurnStates(game_state)) {
+      int eval = minimax(child, depth - 1, alpha, beta, true);
+      min_eval = std::min(eval, min_eval);
+
+      /*
+      beta = std::min(eval, beta);
+      if (beta <= alpha) {
+        break;
+      }
+      */
+    }
+
+    return min_eval;
+  }
+}
+
+std::vector<GameState> MinimaxBotPlayer::nextTurnStates(const GameState& game_state) const {
   std::vector<GameState> ret;
 
 	for (int i = 0; i < BOARD_SIZE; i++) {
@@ -39,7 +89,7 @@ std::vector<GameState> SimpleBotPlayer::nextTurnStates(const GameState& game_sta
 }
 
 // Gets how many pieces are threatening to connect
-int SimpleBotPlayer::getThreatLength(const GameState& game_state, int directionX, int directionY, int x, int y, char marker) const {
+int MinimaxBotPlayer::getThreatLength(const GameState& game_state, int directionX, int directionY, int x, int y, char marker) const {
           int playerCounter = 0;
 
           int i_exp = x;
@@ -78,7 +128,7 @@ int SimpleBotPlayer::getThreatLength(const GameState& game_state, int directionX
           return playerCounter;
 }
 
-bool SimpleBotPlayer::hasWon(const GameState& game_state) const {
+bool MinimaxBotPlayer::hasWon(const GameState& game_state) const {
   int directions[][2] = {
     {1, 0},
     {0, 1},
@@ -138,7 +188,7 @@ bool SimpleBotPlayer::hasWon(const GameState& game_state) const {
   return false;
 }
 
-int SimpleBotPlayer::getScore(int threat_length, int multiplier, int weight) const {
+int MinimaxBotPlayer::getScore(int threat_length, int multiplier, int weight) const {
   if (threat_length == 0)
     return 0;
 
@@ -151,7 +201,7 @@ int SimpleBotPlayer::getScore(int threat_length, int multiplier, int weight) con
   return ret;
 }
 
-int SimpleBotPlayer::evaluate(const GameState& game_state) const {
+int MinimaxBotPlayer::evaluate(const GameState& game_state) const {
   if (hasWon(game_state))
     return std::numeric_limits<int>::max();
 
