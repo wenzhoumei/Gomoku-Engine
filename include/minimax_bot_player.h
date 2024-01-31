@@ -15,4 +15,5 @@ private:
   int getScore(int threat_length, int multiplier, int weight) const;
   int getThreatLength(const GameState& game_state, int directionX, int directionY, int x, int y, char marker) const;
   bool hasWon(const GameState& game_state) const;
+  bool fullBoard(const GameState& game_state) const;
 };

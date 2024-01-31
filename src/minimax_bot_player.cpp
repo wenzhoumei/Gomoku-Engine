@@ -14,8 +14,10 @@ void MinimaxBotPlayer::move(GameState& game_state) {
       best_game_state = gs;
       max_score = score;
 
+      /* thiking 
       std::cout << score << std::endl;
       gs.display();
+      */
     }
   }
 
@@ -26,12 +28,14 @@ void MinimaxBotPlayer::move(GameState& game_state) {
 #include <algorithm>
 int MinimaxBotPlayer::minimax(const GameState& game_state, int depth, int alpha, int beta, bool maximising_player) const {
   bool win = hasWon(game_state);
-  if (depth == 0 || win) {
+  bool draw = fullBoard(game_state);
+
+  if (depth == 0 || win || draw) {
     if (win) {
       if (maximising_player) {
-        return std::numeric_limits<int>::min();
+        return std::numeric_limits<int>::min() + 1;
       } else {
-        return std::numeric_limits<int>::max();
+        return std::numeric_limits<int>::max() - 1;
       }
     }
 
@@ -71,19 +75,87 @@ int MinimaxBotPlayer::minimax(const GameState& game_state, int depth, int alpha,
   }
 }
 
+bool MinimaxBotPlayer::fullBoard(const GameState& game_state) const {
+  for (int i = 0; i < BOARD_SIZE; i++) {
+    for (int j = 0; j < BOARD_SIZE; j++) {
+      if (game_state.board[i][j] == EMPTY_CELL) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
 std::vector<GameState> MinimaxBotPlayer::nextTurnStates(const GameState& game_state) const {
   std::vector<GameState> ret;
 
 	for (int i = 0; i < BOARD_SIZE; i++) {
 		for (int j = 0; j < BOARD_SIZE; j++) {
       if (game_state.board[i][j] == '.') {
-        GameState new_state = game_state;
-        new_state.board[i][j] = game_state.turnOf;
-        new_state.turnOf = new_state.turnOf == PLAYER1_MARKER ? PLAYER2_MARKER : PLAYER1_MARKER;
-        ret.push_back(new_state);
+        int directions[][2] = {
+          {1, 0},
+          {0, 1},
+          {1, 1},
+          {-1, 1},
+        };
+
+        bool add = false;
+
+        for (auto direction : directions) {
+          int new_i = i + direction[0];
+          int new_j = j + direction[1];
+
+          if (!(new_i < 0 || new_i >= BOARD_SIZE || new_j < 0 || new_j >= BOARD_SIZE)
+              && game_state.board[new_i][new_j] != EMPTY_CELL) {
+            add = true;
+            break;
+          }
+
+          new_i = i - direction[0];
+          new_j = j - direction[1];
+
+          if (!(new_i < 0 || new_i >= BOARD_SIZE || new_j < 0 || new_j >= BOARD_SIZE)
+              && game_state.board[new_i][new_j] != EMPTY_CELL) {
+            add = true;
+            break;
+          }
+
+          new_i = i + 2 * direction[0];
+          new_j = j + 2 * direction[1];
+
+          if (!(new_i < 0 || new_i >= BOARD_SIZE || new_j < 0 || new_j >= BOARD_SIZE)
+              && game_state.board[new_i][new_j] != EMPTY_CELL) {
+            add = true;
+            break;
+          }
+
+          new_i = i - 2 * direction[0];
+          new_j = j - 2 * direction[1];
+
+          if (!(new_i < 0 || new_i >= BOARD_SIZE || new_j < 0 || new_j >= BOARD_SIZE)
+              && game_state.board[new_i][new_j] != EMPTY_CELL) {
+            add = true;
+            break;
+          }
+        }
+
+        if (add) {
+          GameState new_state = game_state;
+          new_state.board[i][j] = game_state.turnOf;
+          new_state.turnOf = new_state.turnOf == PLAYER1_MARKER ? PLAYER2_MARKER : PLAYER1_MARKER;
+          ret.push_back(new_state);
+        }
       }
 		}
 	}
+
+  if (ret.size() == 0) {
+          GameState new_state = game_state;
+          new_state.board[BOARD_SIZE/2][BOARD_SIZE/2] = game_state.turnOf;
+          new_state.turnOf = new_state.turnOf == PLAYER1_MARKER ? PLAYER2_MARKER : PLAYER1_MARKER;
+          ret.push_back(new_state);
+  }
 
   return ret;
 }
@@ -204,6 +276,8 @@ int MinimaxBotPlayer::getScore(int threat_length, int multiplier, int weight) co
 int MinimaxBotPlayer::evaluate(const GameState& game_state) const {
   if (hasWon(game_state))
     return std::numeric_limits<int>::max();
+  if (fullBoard(game_state))
+    return 0;
 
   int centre_score = 0;
 

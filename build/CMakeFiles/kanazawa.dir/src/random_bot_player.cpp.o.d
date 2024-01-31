@@ -1,6 +1,7 @@
-CMakeFiles/kanazawa.dir/src/main.cpp.o: \
- /home/wen/Dev/GomokuEngine/src/main.cpp /usr/include/stdc-predef.h \
- /home/wen/Dev/GomokuEngine/src/../include/game.h \
+CMakeFiles/kanazawa.dir/src/random_bot_player.cpp.o: \
+ /home/wen/Dev/GomokuEngine/src/random_bot_player.cpp \
+ /usr/include/stdc-predef.h \
+ /home/wen/Dev/GomokuEngine/src/../include/random_bot_player.h \
  /home/wen/Dev/GomokuEngine/src/../include/player.h \
  /home/wen/Dev/GomokuEngine/src/../include/game_state.h \
  /home/wen/Dev/GomokuEngine/src/../include/game_constants.h \
@@ -104,20 +105,7 @@ CMakeFiles/kanazawa.dir/src/main.cpp.o: \
  /usr/include/c++/13.2.1/cstddef \
  /usr/include/c++/13.2.1/bits/uses_allocator.h \
  /usr/include/c++/13.2.1/bits/uses_allocator_args.h \
- /usr/include/c++/13.2.1/tuple \
- /home/wen/Dev/GomokuEngine/src/../include/human_player.h \
- /home/wen/Dev/GomokuEngine/src/../include/simple_bot_player.h \
- /usr/include/c++/13.2.1/vector \
- /usr/include/c++/13.2.1/bits/stl_uninitialized.h \
- /usr/include/c++/13.2.1/bits/stl_vector.h \
- /usr/include/c++/13.2.1/bits/stl_bvector.h \
- /usr/include/c++/13.2.1/bits/vector.tcc \
- /home/wen/Dev/GomokuEngine/src/../include/minimax_bot_player.h \
- /usr/include/c++/13.2.1/algorithm \
- /usr/include/c++/13.2.1/bits/stl_algo.h \
- /usr/include/c++/13.2.1/bits/algorithmfwd.h \
- /usr/include/c++/13.2.1/bits/stl_heap.h \
- /usr/include/c++/13.2.1/bits/uniform_int_dist.h \
- /usr/include/c++/13.2.1/bits/stl_tempbuf.h \
- /usr/include/c++/13.2.1/pstl/glue_algorithm_defs.h \
- /usr/include/c++/13.2.1/pstl/execution_defs.h
+ /usr/include/c++/13.2.1/tuple /usr/include/c++/13.2.1/ctime \
+ /usr/include/time.h /usr/include/bits/time.h /usr/include/bits/timex.h \
+ /usr/include/bits/types/struct_tm.h \
+ /usr/include/bits/types/struct_itimerspec.h
